@@ -1,5 +1,4 @@
-import ActiveLabel from './components/ActiveLabel/ActiveLabel';
-import NotActiveLabel from './components/NotActiveLabel/NotActiveLabel';
+import StatusLabel, { Status } from './components/StatusLabel/StatusLabel';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -7,8 +6,10 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Home page</h1>
-        <ActiveLabel>Active</ActiveLabel>
-        <NotActiveLabel>Not Active</NotActiveLabel>
+        <StatusLabel status={Status.Active}>Active</StatusLabel>
+        <StatusLabel status={Status.NotActive}>Not Active</StatusLabel>
+        <StatusLabel status={Status.Pending}>Pending</StatusLabel>
+        <StatusLabel status={Status.Suspended}>Suspended</StatusLabel>
       </main>
       <footer className={styles.footer}></footer>
     </div>
