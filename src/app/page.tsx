@@ -1,4 +1,4 @@
-import StatusLabel, { Status } from './components/StatusLabel/StatusLabel';
+import StatusLabel, { Status } from './components/StatusLabel';
 import styles from './page.module.css';
 
 export default function Home() {
@@ -6,6 +6,7 @@ export default function Home() {
     <div className={styles.page}>
       <main className={styles.main}>
         <h1>Home page</h1>
+        <p>{new Date().toTimeString()}</p>
         <StatusLabel status={Status.Active}>Active</StatusLabel>
         <StatusLabel status={Status.NotActive}>Not Active</StatusLabel>
         <StatusLabel status={Status.Pending}>Pending</StatusLabel>
