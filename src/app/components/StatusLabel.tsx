@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './ActiveLabel.module.css';
 import clsx from 'clsx';
 
 export enum Status {
