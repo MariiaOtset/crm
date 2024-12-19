@@ -8,12 +8,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/icons/favicon.png"
-      />
+      <head>
+        <title>CRM</title>
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/icons/favicon.png"
+        />
+      </head>
+
       <body>{children}</body>
     </html>
   );
