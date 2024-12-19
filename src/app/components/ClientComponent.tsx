@@ -10,8 +10,7 @@ const ClientComponent = ({ children }: ClientComponentProps) => {
   console.log('Client Component');
   return (
     <div>
-          <span>Client Component</span>
-          <ServerComponentCopy/>
+      <span>Client Component</span>
       {children}
     </div>
   );

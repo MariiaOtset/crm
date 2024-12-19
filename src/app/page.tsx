@@ -3,6 +3,7 @@ import AddCompanyButton from '@/app/components/AddCompanyButton';
 import styles from './page.module.css';
 import ServerComponent from './components/ServerComponent';
 import ClientComponent from './components/ClientComponent';
+import ServerComponentCopy from './components/ServerComponentCopy';
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
         <StatusLabel status={Status.Suspended}>Suspended</StatusLabel> */}
         <AddCompanyButton />
         <ServerComponent />
-        <ClientComponent />
+        <ClientComponent>
+          <ServerComponentCopy />
+        </ClientComponent>
       </main>
     </div>
   );
