@@ -1,6 +1,8 @@
 // import StatusLabel, { Status } from './components/StatusLabel';
 import AddCompanyButton from '@/app/components/AddCompanyButton';
 import styles from './page.module.css';
+import ServerComponent from './components/ServerComponent';
+import ClientComponent from './components/ClientComponent';
 
 export default function Home() {
   return (
@@ -12,6 +14,8 @@ export default function Home() {
         <StatusLabel status={Status.Pending}>Pending</StatusLabel>
         <StatusLabel status={Status.Suspended}>Suspended</StatusLabel> */}
         <AddCompanyButton />
+        <ServerComponent />
+        <ClientComponent />
       </main>
     </div>
   );
