@@ -6,7 +6,8 @@ type Props = {};
 const NotFound = (props: Props) => {
   return (
     <div>
-      <p>The company is not found</p>
+      <h1 className="text-red-600 font-bold text-xl">404</h1>
+      <p>Company with this id is not found</p>
       <Link href="/companies" className="text-blue-700 font-medium">
         Back to companies
       </Link>

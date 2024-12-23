@@ -10,6 +10,10 @@
 }
 
 body {
-  font-family: 'Plus Jakarta Sans', sans-serif; 
+  font-family: 'Plus Jakarta Sans', sans-serif;
   background: #fafafa;
+}
+
+.my-background {
+  background-image: url('/images/mesh-gradient-1.svg');
 }

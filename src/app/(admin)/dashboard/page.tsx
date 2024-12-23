@@ -1,12 +1,15 @@
-import MagicButton from '@/app/components/MagicButton';
-import React from 'react';
+import Header from '@/app/components/Header';
+import React, { ReactNode } from 'react';
+
+export interface PageProps {
+  children: ReactNode;
+}
 
 const Page = () => {
   return (
-    <div>
-      <p className="text-xl">Dashboard Page</p>
-      <MagicButton />
-    </div>
+    <>
+      <Header>Dashboard Page</Header>
+    </>
   );
 };
 

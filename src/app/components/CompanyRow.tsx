@@ -31,7 +31,15 @@ export default function CompanyRow({
 }: CompanyRowProps) {
   return (
     <tr className="h-14 text-center text-gray-900 bg-white">
-      <td className="text-xs font-medium text-blue-700 rounded-l border-l-4 border-blue-700">
+      <td
+        className={clsx(
+          'text-xs font-medium rounded-l border-l-4',
+          status === Status.Pending && 'text-orange-500 border-orange-500',
+          status === Status.Suspended && 'text-blue-700 border-blue-700',
+          status === Status.Active && 'text-green-500 border-green-500',
+          status === Status.NotActive && 'text-red-700 border-red-700',
+        )}
+      >
         {category}
       </td>
       <td>
