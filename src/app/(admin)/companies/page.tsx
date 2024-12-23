@@ -2,9 +2,9 @@ import { ReactNode } from 'react';
 import Header from '@/app/components/Header';
 import Toolbar from '@/app/components/Toolbar';
 import SearchInput from '@/app/components/SearchInput';
-import AddCompanyButton from '../components/AddCompanyButton';
-import CompanyTable from '../components/CompanyTable';
-import CompanyRow from '../components/CompanyRow';
+import AddCompanyButton from '../../components/AddCompanyButton';
+import CompanyTable from '../../components/CompanyTable';
+import CompanyRow from '../../components/CompanyRow';
 import { Status } from '@/app/components/StatusLabel';
 
 export interface PageProps {
