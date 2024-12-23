@@ -1,4 +1,5 @@
-import { ReactNode } from 'react';
+'use client';
+import { ReactNode, useEffect } from 'react';
 import Header from '@/app/components/Header';
 
 export interface PageProps {
@@ -6,6 +7,8 @@ export interface PageProps {
 }
 
 const Page = ({ params }: PageProps) => {
+  useEffect(() => {});
+
   return (
     <div>
       <Header>Companies ({String(params.id)})</Header>
