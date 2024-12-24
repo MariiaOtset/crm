@@ -4,6 +4,7 @@ import SummaryTable from '@/app/components/SummaryTable';
 import SummaryTableHeader from '@/app/components/SummaryTableHeader';
 import SummaryTableCell from '@/app/components/SummaryTableCell';
 import DashboardCard from '@/app/components/DashboardCard';
+// import MagicButton from '@/app/components/MagicButton';
 
 export interface PageProps {}
 
@@ -17,6 +18,7 @@ export default async function Page({}: PageProps) {
             <SummaryTableHeader>Company</SummaryTableHeader>
             <SummaryTableHeader align="center">Sold</SummaryTableHeader>
             <SummaryTableHeader align="center">Income</SummaryTableHeader>
+                 {/* <MagicButton /> */}
           </>
         }
       >
