@@ -16,10 +16,13 @@ const Page = ({ params }: PageProps) => {
   }, [params.id]);
 
   return (
-    <div>
-      <Header>Companies ({String(params.id)})</Header>
-      <p>{new Date().toTimeString()}</p>
+    <div className="py-6 px-10">
+      <p>{`Information about company with id (${params.id})`}</p>
     </div>
+    // <div>
+    //   <Header>Companies ({String(params.id)})</Header>
+    //   <p>{new Date().toTimeString()}</p>
+    // </div>
   );
 };
 

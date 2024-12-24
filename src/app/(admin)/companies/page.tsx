@@ -14,10 +14,6 @@ export interface PageProps {
 const Page = () => {
   return (
     <div>
-      <Header>Companies</Header>
-      <Toolbar action={<AddCompanyButton />}>
-        <SearchInput />
-      </Toolbar>
       <CompanyTable>
         <CompanyRow
           id={1}
