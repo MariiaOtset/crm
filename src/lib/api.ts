@@ -70,7 +70,7 @@ export const getSummaryCategories = () => {
     {
       categoryId: 8,
       categoryTitle: 'Products',
-      count: 4,
+      count: 12,
     },
   ]);
 };
