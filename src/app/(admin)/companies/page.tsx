@@ -1,20 +1,29 @@
 import { ReactNode } from 'react';
-import Header from '@/app/components/Header';
-import Toolbar from '@/app/components/Toolbar';
-import SearchInput from '@/app/components/SearchInput';
-import AddCompanyButton from '../../components/AddCompanyButton';
 import CompanyTable from '../../components/CompanyTable';
 import CompanyRow from '../../components/CompanyRow';
 import { Status } from '@/app/components/StatusLabel';
+import { dehydrate, HydrationBoundary } from '@tanstack/react-query';
+import { getCompanies } from '@/lib/api';
+import getQueryClient from '@/lib/utils/getQueryClient';
 
 export interface PageProps {
   children: ReactNode;
 }
 
-const Page = () => {
+export default async function Page() {
+  const queryClient = getQueryClient();
+
+  await queryClient.prefetchQuery({
+    queryKey: ['companies'],
+    queryFn: () => getCompanies({ cache: 'no-store' }),
+    staleTime: 10 * 1000,
+  });
+
+  const dehydratedState = dehydrate(queryClient);
+
   return (
     <div>
-      <CompanyTable>
+      {/* <CompanyTable>
         <CompanyRow
           id={1}
           category="Products"
@@ -51,9 +60,10 @@ const Page = () => {
           country="North America"
           joinedDate="05.04.2021"
         />
-      </CompanyTable>
+      </CompanyTable> */}
+      <HydrationBoundary state={dehydratedState}>
+        <CompanyTable />
+      </HydrationBoundary>
     </div>
   );
-};
-
-export default Page;
+}
